@@ -1,3 +1,7 @@
+# login para teste:
+email:marcarvalho3@gmail.com
+senha: 123456
+
 ## Sequencia realizada
 
 Criar projeto Laravel
