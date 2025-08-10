@@ -1,8 +1,8 @@
-// resources/js/Pages/MeusChamados.jsx
 import React from 'react';
 import { Head, Link, router } from '@inertiajs/react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
+// deletar chamado
 export default function MeusChamados({ chamados }) {
   const handleDelete = (id) => {
     if (confirm('Tem certeza que deseja excluir este chamado?')) {
@@ -27,6 +27,8 @@ export default function MeusChamados({ chamados }) {
               {chamados.length === 0 ? (
                 <p>Você ainda não abriu nenhum chamado.</p>
               ) : (
+
+                // Percorrer lista de chamados
                 <ul className="space-y-4">
                   {chamados.map((chamado) => (
                     <li key={chamado.id} className="border p-4 rounded">

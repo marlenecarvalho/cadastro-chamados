@@ -2,7 +2,7 @@ import React from "react";
 import { Head, Link } from "@inertiajs/react";
 
 export default function Welcome({ auth }) {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(); // ano atual para o footer
   const appName = import.meta.env.VITE_APP_NAME || "Seus chamados";
 
   return (
@@ -18,9 +18,10 @@ export default function Welcome({ auth }) {
             Bem-vindo ao <span className="font-semibold">{appName}</span> — sua central de atendimento moderna.
           </p>
         </header>
-
+         
+         
         <div className="flex flex-wrap gap-4 justify-center">
-          {auth.user ? (
+          {auth.user ? (                       // verificar se ja existe cadastro
             <Link
               href={route("dashboard")}
               className="bg-white text-purple-700 hover:bg-purple-100 font-medium py-2 px-6 rounded-lg shadow transition duration-300"
