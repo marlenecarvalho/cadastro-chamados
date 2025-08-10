@@ -1,44 +1,74 @@
 ## Sequencia realizada
 
 Criar projeto Laravel
+
 ´´´
+
 composer create-project laravel/laravel .
+
 ´´´
+
 Intalar o breeze para login
+
 ´´´
+
 composer require laravel/breeze --dev
+
 ´´´
+
 php artisan breeze:install
+
 ´´´
+
 Criar o db, ajustar o dotenv e rodar o migrate
+
 ´´´
+
 php artisan migrate
+
 ´´´
+
 Instalar as dependecias do Node.js
+
 ´´´
+
 npm install
+
 ´´´
+
 Executar as bibliotecas Node.js
+
 ´´´
+
 npm run dev
+
 ´´´
+
 Executar o projeto Laravel
+
 ´´´
 php artisan serve
+
 ´´´
+
 Parar o servidor
+
 ´´´
+
 Ctrl + C
 
 Criar seeder para testes
+
 ´´´
+
 php artisan make:seeder UserSeeder
+
 
 Criar as demais paginas do projeto e integrar as rotas
 
 Fazer a migration do banco para os chamados
 ´´´
-## Migration/Scrip do create_chamados_table:
+## Migration/Script do create_chamados_table:
         Schema::create('chamados', function (Blueprint $table) {
         $table->id();
         $table->foreignId('user_id')->constrained()->onDelete('cascade');
@@ -50,7 +80,7 @@ Fazer a migration do banco para os chamados
 
         });
 
-## Migration/Scrip do create_users_table:
+## Migration/Script do create_users_table:
 
             schema::create('users', function (Blueprint $table) {
             $table->id();
